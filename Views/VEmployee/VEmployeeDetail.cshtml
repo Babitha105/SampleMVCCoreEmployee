@@ -1,0 +1,57 @@
+﻿
+@model List<VEmployeeModel>
+
+@{
+    ViewData["Title"] = "EmployeeDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Employee Detail</h1>
+<head>
+    <title>Employee</title>
+</head>
+<body>
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr><td></td><td><td></td><td><a asp-action="VEmployeeAddEdit" asp-controller="VEmployee">Create New</a></td></tr>
+            <tr>
+                <th>
+                    Employee Name
+                </th>
+                <th>
+                    Designation
+                </th>
+                <th>
+                    Salary
+                </th>
+                <th>
+                    Edit|Delete
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.empname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.designation)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.salary)
+                    </td>
+                    <td>
+                        <a asp-action="EditEmployee" asp-route-id="@item.empid">Edit</a> |
+                        <a asp-action="DeleteEmployee" asp-route-id="@item.empid">Delete</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+</body>
+
+
+

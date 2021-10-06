@@ -1,0 +1,58 @@
+﻿
+@model SampleMVCCoreEmployee.Models.VEmployeeModel
+
+@{
+    ViewData["Title"] = "VEmployeeDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>VEmployeeDetail</h1>
+
+
+<head>
+    <title>Employee</title>
+</head>
+<body>
+    <table class="table table-bordered">
+        <thead class="thead-light">
+            <tr>
+                <th>
+                    Employee Name
+                </th>
+                <th>
+                    Designation
+                </th>
+                <th>
+                    Salary
+                </th>
+                <th>
+                    <a asp-action="VEmployeeAddEdit">Create New</a>
+                    <a asp-action="VEmployeeAddEdit">Create </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @*<tr>
+                        <td>
+                            @Model.empid
+                        </td>
+                        <td>
+                            @Model.empname
+                        </td>
+                        <td>
+                            @Model.designation
+                        </td>
+                        <td>
+                            <a asp-action="AddOrEdit" asp-route-id="@Model.empid">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@Model.empid">Delete</a>
+                        </td>
+                    </tr>*@
+
+        </tbody>
+    </table>
+
+</body>
+
+
+
